@@ -8,7 +8,7 @@ const Highlights = () => {
     useGSAP(() => {
         gsap.to(['.left-column', '.right-column'], {
            scrollTrigger: {
-               trigger: '#hightlights',
+               trigger: '#highlights',
                start: isMobile ? ' bottom bottom ' : ' top top '
            },
             y:0,
@@ -17,7 +17,7 @@ const Highlights = () => {
             duration: 1,
             ease: 'power1.inOut',
         });
-    })
+    }, [isMobile]);
 
 
     return (
@@ -52,6 +52,6 @@ const Highlights = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 export default Highlights
